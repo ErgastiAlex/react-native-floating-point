@@ -1,0 +1,36 @@
+{
+  "name": "react-native-floating-button",
+  "version": "1.0.0",
+  "description": "A simple floating button for react native with nested button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
+    "ios",
+    "android",
+    "ui",
+    "floating",
+    "button",
+    "floating button"
+  ],
+  "author": "Alex Ergasti",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErgastiAlex/react-native-floating-point.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ErgastiAlex/react-native-floating-point/issues"
+  },
+  "homepage": "https://github.com/ErgastiAlex/react-native-floating-point#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.59.0"
+  }
+}

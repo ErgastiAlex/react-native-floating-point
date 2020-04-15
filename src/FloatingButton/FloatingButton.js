@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-
+import FloatingButtonChild from './FloatingButtonChild'
 const FloatingButton = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <View style={getMainViewStyle(props.position, props.padding)}>
+    <View style={getMainViewStyle(props.position,props.padding)}>
       <TouchableOpacity
         style={{ ...styles.view, backgroundColor: props.backgroundColor }}
         onPress={() => {
-          if (props.hasChildren === true) {
+          if (props.hasChildren == true) {
+            console.log(props.children);
             setIsOpen(!isOpen);
           } else {
             props.onPress();
@@ -28,18 +29,19 @@ FloatingButton.defaultProps = {
   position: "flex-end",
   backgroundColor: "red",
   hasChildren: true,
-  padding: 10,
+  padding:15
 };
 
-const getMainViewStyle = (position, padding) => {
+const getMainViewStyle = (position,padding) => {
   return {
     position: "absolute",
     left: 0,
     right: 0,
-    bottom: 0,
-    padding: padding,
+    bottom:0,
     flexDirection: "column-reverse",
-    alignItems: position,
+    padding:padding,
+    alignItems:position,
+    zIndex:1
   };
 };
 

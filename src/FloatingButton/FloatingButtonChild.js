@@ -11,7 +11,7 @@ const FloatingButtonChild = (props) => {
   const [fadeIn] = useState(new Animated.Value(0));
 
   useEffect(() => {
-    Animated.timing(fadeIn, { toValue: 1, timing: 10000 }).start();
+    Animated.timing(fadeIn, { toValue: 1, timing: 10000 , useNativeDriver: true}).start();
   }, []);
   return (
     <Animated.View style={{ ...styles.mainView, opacity: fadeIn }}>

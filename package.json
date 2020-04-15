@@ -1,6 +1,6 @@
 {
-  "name": "react-native-floating-button",
-  "version": "1.0.0",
+  "name": "react-native-action-floating-button",
+  "version": "1.0.1",
   "description": "A simple floating button for react native with nested button",
   "main": "index.js",
   "scripts": {

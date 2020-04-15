@@ -5,7 +5,7 @@ const FloatingButton = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <View style={getMainViewStyle(props.position)}>
+    <View style={getMainViewStyle(props.position, props.padding)}>
       <TouchableOpacity
         style={{ ...styles.view, backgroundColor: props.backgroundColor }}
         onPress={() => {
@@ -28,17 +28,18 @@ FloatingButton.defaultProps = {
   position: "flex-end",
   backgroundColor: "red",
   hasChildren: true,
+  padding: 10,
 };
 
-const getMainViewStyle = (position) => {
-  alert(position)
+const getMainViewStyle = (position, padding) => {
   return {
     position: "absolute",
     left: 0,
     right: 0,
-    bottom:0,
+    bottom: 0,
+    padding: padding,
     flexDirection: "column-reverse",
-    alignItems:position,
+    alignItems: position,
   };
 };
 

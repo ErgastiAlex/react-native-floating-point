@@ -28,7 +28,7 @@ const FloatingButtonChild = (props) => {
     </Animated.View>
   );
 };
-FloatingButton.defaultProps = {
+FloatingButtonChild.defaultProps = {
   position: "right",
   backgroundColor: "red",
 };

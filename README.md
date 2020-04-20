@@ -108,6 +108,7 @@ const Floating = () => (
     <td>Use to change the icon or text of the button</td>
 </tr>
 </table>
+
 ## Bug
 
 <ul>

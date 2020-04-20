@@ -11,16 +11,26 @@ const FloatingButtonChild = (props) => {
   const [fadeIn] = useState(new Animated.Value(0));
 
   useEffect(() => {
-    Animated.timing(fadeIn, { toValue: 1, timing: 10000 , useNativeDriver: true}).start();
+    Animated.timing(fadeIn, {
+      toValue: 1,
+      timing: 10000,
+      useNativeDriver: true,
+    }).start();
   }, []);
   return (
-    <Animated.View style={{ ...styles.mainView, opacity: fadeIn }}>
+    <Animated.View
+      style={{ ...getMainViewStyle(props.flexDirection), opacity: fadeIn }}
+    >
       {props.title && props.title != "" && (
         <Text style={styles.tooltip}>{props.title}</Text>
       )}
       <TouchableOpacity onPress={() => props.onPress()}>
         <View
-          style={{ ...styles.button, backgroundColor: props.backgroundColor }}
+          style={{
+            ...styles.button,
+            ...props.shadow,
+            backgroundColor: props.backgroundColor,
+          }}
         >
           {props.children}
         </View>
@@ -28,24 +38,29 @@ const FloatingButtonChild = (props) => {
     </Animated.View>
   );
 };
+
 FloatingButtonChild.defaultProps = {
   position: "right",
   backgroundColor: "red",
+  flexDirection: "row",
+  shadow: {},
+};
+
+const getMainViewStyle = (flexDirection) => {
+  return {
+    flexDirection: flexDirection,
+    justifyContent: flexDirection == "row" ? "flex-end" : "flex-start" < s,
+    alignItems: "center",
+    marginBottom: 15,
+  };
 };
 
 const styles = StyleSheet.create({
-  mainView: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    marginBottom: 15,
-  },
   button: {
     width: 55,
     height: 55,
     alignItems: "center",
     justifyContent: "center",
-
     borderRadius: 30,
   },
   tooltip: {

@@ -1,3 +1,9 @@
+# Example Image
+<p>
+<img src="https://user-images.githubusercontent.com/20249175/79797127-02c3c800-8357-11ea-8b31-7ef24a4fa6c9.png" width=200>
+<img src="https://user-images.githubusercontent.com/20249175/79796225-782e9900-8355-11ea-9594-358cb075352e.png" width=200>
+</p>
+
 # Basic Usage
 
 ```jsx
